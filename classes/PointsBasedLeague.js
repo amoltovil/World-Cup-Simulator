@@ -108,7 +108,7 @@ export default class PointsBasedLeague extends League{
     }
 
     existeMatch(teamA, teamB){
-        console.log('estoy aqui')
+        
         if ((teamA.name == this.summaries.results.homeTeam && teamB.name == this.summaries.results.awayTeam) ||
             (teamB.name == this.summaries.results.homeTeam && teamA.name == this.summaries.results.awayTeam)) {
             return true    
@@ -149,11 +149,11 @@ export default class PointsBasedLeague extends League{
             } else if (teamA.points < teamB.points){
                 return 1
             } /*else {   //this.find () --> encontrar el partido
-                console.log('Existe partido', this.existeMatch(teamA, teamB))
+                console.log('Existe partido', this.summaries.results.existeMatch(teamA, teamB))
                 if (this.existeMatch(teamA, teamB)) {
                      
                     console.log('Compara goles')
-                } */
+                } 
                 //let matchBetweenTeams = this.getMatchBetweenTeams(teamA, teamB);
                 /*if ((matchBetweenTeams.homeTeam == teamA.name) && (matchBetweenTeams.homeGoals > matchBetweenTeams.awayGoals)){
                     return -1;
@@ -177,7 +177,7 @@ export default class PointsBasedLeague extends League{
                         return teamA.name > teamB.name ? 1 : teamA.name < teamB.name ? -1 : 0
                     }
                 }
-            //}
+            //} //
         })
         //console.log('standings')
         //console.table(this.teams)
